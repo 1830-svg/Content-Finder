@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info About Basketball</title>
+<link rel="icon" type="image/png" href="https://static.vecteezy.com/system/resources/previews/025/667/886/non_2x/basketball-icon-design-vector.jpg">
+
+<style>
+:root {
+  --primary1: #4a90e2;
+  --primary2: #00c9a7;
+  --primary3: #d4f5fa;
+  --primary4: #f1f8e9;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--primary1), var(--primary2), var(--primary3), var(--primary4));
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* ===== CONTAINER ===== */
+.detail-container {
+  max-width: 950px;
+  margin: 80px auto;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  padding: 40px 60px;
+  position: relative;
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== BACK BUTTON ===== */
+.back {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: linear-gradient(135deg, var(--primary2), var(--primary1));
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.back:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* SVG ARROW */
+.back svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* ===== IMAGE ===== */
+.detail-container img {
+  width: 290px;
+  display: block;
+  margin: 40px auto 20px;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.2));
+}
+
+/* ===== TITLE ===== */
+.detail-container h1 {
+  text-align: center;
+  color: var(--primary1);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* ===== CONTENT ===== */
+#topicContent {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  animation: fadeText 0.8s ease;
+}
+
+@keyframes fadeText {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ===== SCROLLBAR ===== */
+#topicContent::-webkit-scrollbar {
+  width: 8px;
+}
+#topicContent::-webkit-scrollbar-thumb {
+  background: var(--primary2);
+  border-radius: 6px;
+}
+#topicContent::-webkit-scrollbar-thumb:hover {
+  background: var(--primary1);
+}
+h3{
+  text-decoration: underline;
+}
+h2{
+  color:rgb(0, 135, 245);
+}
+ol {
+  list-style-type: disc;  
+}
+    .card-menu-wrapper {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .card-menu-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-menu-btn svg {
+      stroke: #fff;
+    }
+
+    /* ===== Dropdown Menu ===== */
+    .card-menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      min-width: 260px;
+      max-height: 280px;
+      overflow-y: auto;
+      border-radius: 12px;
+      padding: 12px;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7, #d4f5fa, #f1f8e9);
+      background-size: 400% 400%;
+      animation: menuGradient 8s ease infinite;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    @keyframes menuGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== Buttons inside Dropdown ===== */
+    .card-menu-dropdown button {
+      display: block;
+      width: 100%;
+      background: transparent;
+      color: #000;
+      border: 1.5px solid #000;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 6px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: left;
+    }
+
+    .card-menu-dropdown button:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateX(6px);
+    }
+
+    .card-menu-wrapper.open .card-menu-dropdown {
+      display: block;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="detail-container">
+  <div class="back" onclick="goBack()">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </div>
+
+  <img id="topicImg" src="data:image/jpeg;base64,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" alt="Topic Icon">
+  <h1 id="topicTitle">Basketball</h1> 
+  <div class="card-menu-wrapper">
+      <button class="card-menu-btn" aria-label="Open menu" title="Menu" onclick="toggleMenu()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="card-menu-dropdown" id="menu">
+        <button onclick="scrollToSection('intro')">Introduction to Basketball</button>
+        <button onclick="scrollToSection('history')">History and Evolution of Basketball</button>
+        <button onclick="scrollToSection('objective')">The Objective of the Game</button>
+      </div>
+    </div>
+<div id="topicContent">
+   <section id="intro">
+     <h2>Introduction to Basketball</h2>
+    <p><i>Basketball is a team sport played by two opposing teams of five players each on a rectangular court. The objective is to score points by shooting a ball through a raised hoop, or basket, while preventing the other team from doing the same. The game is known for its fast pace, strategic gameplay, and dynamic, end-to-end action. </i></p>
+   <h3> Origin</h3>
+<p><b>A solution for winter:</b> Basketball was invented in December 1891 by James Naismith, a Canadian physical education instructor at the International YMCA Training School (now Springfield College) in Massachusetts. Naismith was tasked with creating a new indoor sport to keep his students active and engaged during the cold New England winters.</p>
+<p><b>Simple beginnings:</b> Naismith used peach baskets for hoops and a soccer ball for the first game. The initial game involved two teams of nine players and was governed by 13 basic rules. A key distinction from modern basketball was that the bottom of the peach baskets had to be manually retrieved after each successful shot, a tedious process that was soon remedied by cutting out the bottom.</p>
+<p><b>Rapid expansion:</b> The new game was an instant success. The YMCA played a critical role in spreading basketball throughout the United States and the world. The rules were published in a school magazine in 1892, leading to the game's adoption at other YMCA branches and colleges. By 1895, women's basketball was established, and the first professional league was formed in 1898. </p>
+<h3>Global popularity</h3>
+<p><b>Basketball has evolved into one of the world's most popular and widely viewed sports. A 2024 Nielsen Sports study indicated there are over 3.3 billion basketball fans globally, making it the second most popular sport behind football (soccer). </p>
+<p><b>The sport's immense popularity can be attributed to several factors:</b></p>
+<p><b>Accessibility:</b> Basketball is an accessible sport that can be played with minimal equipment in a variety of settings, including indoor gyms and outdoor street courts. This low barrier to entry has helped it take hold in communities worldwide.</p>
+<p><b>Dynamic and fast-paced gameplay:</b> The constant movement, high-scoring opportunities, and potential for dramatic plays like slam dunks make basketball visually appealing and exciting for spectators.</p>
+<p><b>International leagues and events:</b> While the NBA in North America remains the world's most prominent and influential professional league, basketball's global reach is also driven by other major organizations and events. These include:</p>
+<ol>
+<li><b>FIBA:</b> The International Basketball Federation organizes global competitions like the FIBA Basketball World Cup.</li>
+<li><b>Olympic Games:</b> Men's basketball has been an official Olympic sport since 1936, with women's basketball added in 1976.</li>
+<li><b>International stars:</b> The rise of international players in the NBA, from figures like Yao Ming and Dirk Nowitzki to modern-day stars like Giannis Antetokounmpo, has driven global interest.</li>
+</ol>
+<p><b>Cultural influence:</b> The sport has a significant cultural footprint, with its influence extending into fashion, music, and entertainment. The iconic status of superstar athletes inspires millions of people to play and follow the game. </p>
+</section>
+<section id="history">
+<h2>History and Evolution of Basketball</h2>
+<p><i>Basketball began in December 1891 when James Naismith created a new indoor game with 13 rules for students at the YMCA in Springfield, Massachusetts. It evolved from using peach baskets and a soccer ball to becoming a global professional sport through key changes like the introduction of dribbling, open metal hoops, and the shot clock, and the establishment of professional leagues like the NBA and the international governing body FIBA</i></p>
+<h3>The beginning (1891)</h3>
+<p><b>Inventor:</b> James Naismith, a physical education instructor, invented the game at the International YMCA Training School in Springfield, Massachusetts. </p>
+<p><b>Inspiration:</b> The need for an indoor game that was less rough than football to be played during the winter in the New England area. </p>
+<p><b>Original rules:</b> Naismith devised a set of 13 rules, and the first game was played with nine players per team using a soccer ball and two peach baskets. </p>
+<h3>Early growth and evolution (1892-1940s)</h3>
+<p><b>Spread:</b> The game quickly spread through YMCA associations across the United States and internationally, thanks to YMCA missionaries. </p>
+<h3>Key rule changes:</h3>
+<p><b>Dribbling:</b> Was introduced in the early 1900s, allowing players to move with the ball. </p>
+<p><b>Open hoops:</b> The solid-bottom peach baskets were replaced with open metal hoops with nets, which sped up the game since players didn't have to retrieve the ball each time it was scored. </p>
+<p><b>Backboards:</b> Were added, which were initially used to stop fans from interfering with shots. </p>
+<p><b>Player count:</b> The number of players was standardized to five per team. </p>
+<p><b>First professional league:</b> The Basketball Association of America (BAA) was formed in 1946. </p>
+<h3>Professionalization and globalization (1950s-Present)</h3>
+<p><b>Formation of the NBA:</b> The BAA merged with the National Basketball League (NBL) in 1949 to create the National Basketball Association (NBA). </p>
+<p><b>Global governing body:</b> The International Basketball Federation (FIBA) was founded in 1932 to standardize rules and organize international competition, leading to basketball's inclusion in the Olympics in 1936. </p>
+<p><b>Shot clock:</b> Was implemented in the 1950s to increase the pace and excitement of the game. </p>
+<p><b>International recognition:</b> The sport's global appeal grew significantly with the success of the "Dream Team" in the 1992 Olympics, featuring NBA stars. </p>
+<p><b>Professional leagues:</b> Today, the NBA is the most prominent professional league, but other significant professional leagues exist globally, such as the EuroLeague in Europe and various national leagues in other continents. </p>
+</section>
+<section id="objective">  
+<h2>The Objective of the Game</h2>
+<p><i>For any game, the objective is to win by understanding the rules, executing the right strategies, and working together effectively with teammates. The specific path to victory is defined by the game's scoring, gameplay flow, and team coordination. </i></p>
+<p><b>Scoring:</b> How the winner is decided</p>
+<p>Scoring is the feedback system that tells players and spectators how well each team or player is performing. While specific systems vary by game, they all share common principles. </p>
+<p><b>Point-based:</b> In sports like basketball and American football, points are awarded for specific achievements like baskets, field goals, or touchdowns. The team with the most points at the end of the game wins.</p>
+<p><b>Goal-based:</b> Found in games like soccer and hockey, this simple system awards a point for every goal scored. The team with more goals is the winner.</p>
+<p><b>Time-based:</b> In racing, swimming, and track and field, the objective is to complete a task in the shortest amount of time. The winner is the player or team with the fastest time.</p>
+<p><b>Set-based:</b> In sports like tennis and volleyball, a match is divided into sets. The first player or team to win a certain number of sets is the victor.</p>
+<p><b>Performance-based:</b> Some games, such as figure skating or gymnastics, are scored subjectively by judges based on execution, technique, and artistry. The highest score wins. </p>
+<p><b>Gameplay flow:</b> How the game unfolds</p>
+<p>Gameplay flow, or game flow, describes the player's experience over time, specifically focusing on the pace, difficulty, and immersion. Good flow balances challenge with a player's skill level to prevent boredom and frustration, keeping players fully engaged.</p>
+<p><b>Clear goals:</b> Players should always know what they need to achieve next, whether it's completing a mission or finding a specific item.</p>
+<p><b>Skill progression:</b> As the player's skill improves, the game's difficulty should increase at a proportional rate. This keeps the experience consistently challenging but manageable.</p>
+<p><b>Timely feedback:</b> Scoring systems, visual cues, and audio signals provide immediate feedback to let players know how they are performing. This reinforces positive actions and motivates players to continue.</p>
+<p><b>Dynamic elements:</b> Games maintain flow by creating a balance of action and downtime. This may involve using intense combat followed by a chance to rest and explore. </p>
+<p><b>Team coordination:</b> Working together for victory</p>
+<p>In team-based games, individual talent is not enough. Success relies heavily on the ability of teammates to work together toward a common goal. </p>
+<b>Effective team coordination is built on several pillars:</b> </p>
+<p><b>Effective communication:</b> Teammates must be able to share information clearly and quickly, whether through voice chat, in-game signals, or body language.</p>
+<p><b>Defined roles:</b> Every player should understand their specific role and responsibility. For example, in a game like cricket, a team's success depends on bowlers, batters, and fielders all executing their parts of the strategy.</p>
+<p><b>Shared strategy:</b> A team's ability to win is tied to its shared strategy. At the highest level, this includes analyzing opponents and adapting tactics during play.</p>
+<p><b>Trust and support:</b> Team members must trust their teammates to perform their roles correctly. Providing encouragement, especially during challenging moments, helps boost morale and maintain focus. </p>
+</section>
+</div>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+ function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      document.getElementById("menu").style.display = "none";
+    }
+
+    // Hide menu when clicking outside
+    document.addEventListener("click", (event) => {
+      const menu = document.getElementById("menu");
+      const button = document.querySelector(".card-menu-btn");
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+ </script>
+
+</body>
+</html>

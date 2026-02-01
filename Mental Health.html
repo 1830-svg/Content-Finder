@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info About Mental health</title>
+<link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTjBsRZxC8jX7Y19k3L087No1aWgcUFo5Y_w&s">
+
+<style>
+:root {
+  --primary1: #4a90e2;
+  --primary2: #00c9a7;
+  --primary3: #d4f5fa;
+  --primary4: #f1f8e9;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--primary1), var(--primary2), var(--primary3), var(--primary4));
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* ===== CONTAINER ===== */
+.detail-container {
+  max-width: 950px;
+  margin: 80px auto;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  padding: 40px 60px;
+  position: relative;
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== BACK BUTTON ===== */
+.back {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: linear-gradient(135deg, var(--primary2), var(--primary1));
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.back:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* SVG ARROW */
+.back svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* ===== IMAGE ===== */
+.detail-container img {
+  width: 290px;
+  display: block;
+  margin: 40px auto 20px;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.2));
+}
+
+/* ===== TITLE ===== */
+.detail-container h1 {
+  text-align: center;
+  color: var(--primary1);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* ===== CONTENT ===== */
+#topicContent {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  animation: fadeText 0.8s ease;
+}
+
+@keyframes fadeText {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ===== SCROLLBAR ===== */
+#topicContent::-webkit-scrollbar {
+  width: 8px;
+}
+#topicContent::-webkit-scrollbar-thumb {
+  background: var(--primary2);
+  border-radius: 6px;
+}
+#topicContent::-webkit-scrollbar-thumb:hover {
+  background: var(--primary1);
+}
+h3{
+  text-decoration: underline;
+}
+h2{
+  color:rgb(0, 135, 245);
+}
+ol {
+  list-style-type: disc;  
+}
+.card-menu-wrapper {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .card-menu-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-menu-btn svg {
+      stroke: #fff;
+    }
+
+    /* ===== Dropdown Menu ===== */
+    .card-menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      min-width: 260px;
+      max-height: 280px;
+      overflow-y: auto;
+      border-radius: 12px;
+      padding: 12px;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7, #d4f5fa, #f1f8e9);
+      background-size: 400% 400%;
+      animation: menuGradient 8s ease infinite;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    @keyframes menuGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== Buttons inside Dropdown ===== */
+    .card-menu-dropdown button {
+      display: block;
+      width: 100%;
+      background: transparent;
+      color: #000;
+      border: 1.5px solid #000;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 6px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: left;
+    }
+
+    .card-menu-dropdown button:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateX(6px);
+    }
+
+    .card-menu-wrapper.open .card-menu-dropdown {
+      display: block;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="detail-container">
+  <div class="back" onclick="goBack()">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </div>
+
+  <img id="topicImg" src="data:image/png;base64,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" alt="Topic Icon">
+  <h1 id="topicTitle">Mental Health </h1>
+  <div class="card-menu-wrapper">
+      <button class="card-menu-btn" aria-label="Open menu" title="Menu" onclick="toggleMenu()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="card-menu-dropdown" id="menu">
+        <button onclick="scrollToSection('intro')">Introduction to Mental Health</button>
+        <button onclick="scrollToSection('mental')">What Is Mental Health</button>
+        <button onclick="scrollToSection('serious')">Serious Mental Health Disorders</button>
+      </div>
+    </div>
+  <div id="topicContent">
+    <section id="intro">
+    <h2>Introduction to Mental Health</h2>
+   <p><i> Mental well-being is crucial for overall health because it affects how you think, feel, and act, influencing your ability to cope with stress, build relationships, and make decisions. It is a state of well-being that allows individuals to realize their potential, work productively, and contribute to their community. Prioritizing mental health is just as important as physical health, as it underpins your ability to lead a satisfying and productive life.</i></p> 
+<h3>The importance of mental well-being</h3>
+<p><b>Impact on daily life: </b>Mental health determines how you handle stress, relate to others, and make choices, making it a key component of your everyday experience. </p>
+<p><b>Resilience: </b>Good mental health builds resilience, which helps you bounce back from adversity and navigate life's challenges. </p>
+<p><b>Productivity and contribution: </b>It enables you to work well, learn, and contribute to your community and social life. </p>
+<p><b>Holistic health: </b>Mental, physical, and social well-being are interconnected. A healthy psychological state supports a healthy physical condition and a happy life, according to MedPark Hospital. </p>
+<p><b>Beyond the absence of illness: </b>Mental health is not simply the absence of mental illness; it's a positive state of well-being that includes happiness, contentment, and the ability to manage emotions effectively, explains the World Health Organization (WHO). </p>
+<h3>Maintaining mental well-being</h3>
+<p><b>Coping mechanisms: </b>Developing healthy coping mechanisms is key to managing daily pressures. </p>
+<p><b>Social connections: </b>Building and maintaining strong relationships with family, friends, and your community is vital for social and emotional well-being, notes Vedantu.</p>
+<p><b>Lifestyle habits: </b>Lifestyle factors like getting enough sleep, eating a balanced diet, and getting regular exercise all support mental wellness, says CBC Kids News. </p>
+<p><b>Self-care: </b>Practices like self-care and kindness can help in maintaining and supporting your mental health. </p>
+</section>
+<section id="mental">
+<h2>What Is Mental Health</h2>
+<p><i>Mental health is a state of emotional, psychological, and social well-being that affects how you think, feel, and act. Key aspects include the ability to cope with stress, work productively, and contribute to your community. Mental health is as important as physical health because it influences your ability to function, form relationships, and handle life's challenges, while neglecting it can lead to negative outcomes for both mental and physical well-being. </i></p>
+<h3>Definition and key aspects</h3>
+<p><b>Overall well-being: </b>Mental health is a state of well-being where an individual realizes their own abilities, can cope with the normal stresses of life, can work productively, and is able to make a contribution to their community, according to the World Health Organization (WHO). 
+<p><b>Emotional, psychological, and social: </b>It encompasses your emotional, psychological, and social well-being, affecting how you handle situations, relate to others, and make choices. 
+<p><b>Functioning: </b>A person with good mental health can cope with the stresses of life, learn well, work well, and handle change. 
+<p><b>It is more than the absence of illness: </b>Mental health is not just the absence of a mental illness; it is a positive state of well-being. 
+<h3>Why mental health matters as much as physical health</h3>
+<p><b>Interconnectedness: </b>Mental and physical health are deeply interconnected; mental health issues can lead to physical problems, and physical health conditions can impact mental well-being. 
+<p><b>Impact on daily life: </b>Mental health conditions can significantly impair your ability to function in daily life, from maintaining relationships and handling stress to performing at work or school. 
+<p><b>Foundation for a productive life: </b>Good mental health is the foundation for individual well-being and the effective functioning of a community, impacting educational outcomes, productivity, and social development. 
+<p><b>Risk of untreated conditions: </b>Without treatment, mental illnesses can lead to significant emotional, behavioral, and physical health problems. 
+<p><b>Combating stigma: </b>Recognizing mental health as equally important to physical health is crucial for combating the stigma, shame, and isolation that can prevent people from seeking help. 
+</section>
+<section id="serious">
+<h2>Serious Mental Health Disorders</h2>
+<p><i>While not a mental health disorder itself, migraine is a neurological condition that has a significant and well-documented link with common mental health disorders, such as anxiety, depression, and bipolar disorder. </i></p>
+<h3>Anxiety disorders</h3> 
+<p><b>Generalized anxiety disorder (GAD): </b>Causes persistent, excessive worry about everyday things.</p>
+<p><b>Social phobia: </b>An intense, persistent fear of social situations.</p>
+<p><b>Panic disorder: </b>Involves recurring, unexpected panic attacks.</p>
+<p><b>Post-traumatic stress disorder (PTSD): </b>Triggered by a terrifying event, leading to flashbacks and severe anxiety.</p>
+<p><b>Obsessive-compulsive disorder (OCD): </b>Characterized by unwanted, repetitive thoughts and compulsive behaviors. </p>
+<h3>Mood disorders </h3>
+<p><b>Depression: </b>A mood disorder causing a persistent feeling of sadness and loss of interest. People with migraines are up to five times more likely to develop depression.</p>
+<p><b>Bipolar disorder: </b>Causes dramatic shifts in mood, energy, and concentration, with episodes of mania (highs) and depression (lows). </p>
+<h3>Eating disorders </h3>
+<p><b>These are serious mental health issues linked to persistent, harmful eating habits. Examples include anorexia nervosa, bulimia nervosa, and binge-eating disorder. </p>
+<h3>Psychotic disorders </h3>
+<p><b>Schizophrenia: </b>A chronic, severe mental disorder affecting how a person thinks, feels, and behaves.</p>
+<p><b>Psychosis: </b>A loss of touch with reality, which can be a symptom of schizophrenia, severe depression, anxiety, or bipolar disorder. </p>
+<h3>Neurodevelopmental disorders </h3>
+<p><b>Attention-deficit/hyperactivity disorder (ADHD): </b>A chronic condition including attention difficulty, hyperactivity, and impulsiveness.</p>
+<p><b>Autism spectrum disorder (ASD): </b>A complex developmental condition involving persistent challenges in social interaction, speech, and nonverbal communication. </p>
+<h3>Personality disorders </h3>
+<p><b>These involve enduring, unhealthy patterns of thought, function, and behavior. Borderline, antisocial, and narcissistic personality disorders are examples. </p>
+<h3>The migraine and mental health connection</h3>
+<p>While a physical disorder, migraine is deeply intertwined with mental health conditions.</p>
+<p><b>Shared mechanisms: </b>Migraine, depression, and anxiety share genetic and physiological links involving neurotransmitters like serotonin and the brain's stress response system.</p>
+<p><b>Bidirectional relationship: </b>The connection goes both ways. Mental health disorders can increase the frequency and severity of migraine attacks, and chronic migraine can increase the risk of developing anxiety or depression due to the pain and lifestyle disruption it causes.</p>
+<p><b>Higher comorbidity: </b>Up to 50% of people with chronic migraines also have an anxiety disorder, and around 25% may have PTSD. For episodic migraines, the numbers are lower but still significant. </p>
+<h3>When to seek professional help</h3>
+<p>If you are struggling with chronic migraine or symptoms of a mental health condition, it is important to talk to a healthcare professional. Effective treatment for one condition can often improve the other. Treatment for migraine can lead to better mental health, while addressing mental health issues can also reduce the frequency of migraine attacks. </p>
+
+</div>
+</div>
+  </section>
+<script>
+function goBack() {
+  window.history.back();
+}
+function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      document.getElementById("menu").style.display = "none";
+    }
+
+    // Hide menu when clicking outside
+    document.addEventListener("click", (event) => {
+      const menu = document.getElementById("menu");
+      const button = document.querySelector(".card-menu-btn");
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+</script>
+
+</body>
+</html>

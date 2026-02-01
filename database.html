@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Database</title>
+  <link rel="icon" type="image/png" href="https://img.freepik.com/free-photo/cloud-drawer_1048-1659.jpg?semt=ais_hybrid&w=740&q=80">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7, #d4f5fa, #f1f8e9);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .admin-lock {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .admin-lock h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #2b2b2b;
+    }
+
+    .admin-lock input {
+      width: 85%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: #f3f3f3;
+      font-size: 1rem;
+    }
+
+    .admin-lock button {
+      width: 90%;
+      padding: 10px;
+      margin-top: 15px;
+      background: linear-gradient(90deg, #00c9a7, #4a90e2);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .admin-lock button:hover {
+      background: linear-gradient(90deg, #4a90e2, #00c9a7);
+      transform: scale(1.05);
+    }
+
+    .message {
+      margin-top: 15px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-lock">
+    <h2>Admin Login 🔒</h2>
+    <input type="text" id="adminId" placeholder="Enter Admin ID">
+    <input type="password" id="adminPass" placeholder="Enter Password">
+    <button onclick="checkAdmin()">Login</button>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    const adminCredentials = {
+      id: "admin123",
+      pass: "123"
+    };
+
+    const idInput = document.getElementById("adminId");
+    const passInput = document.getElementById("adminPass");
+    const message = document.getElementById("message");
+
+    // Enter key triggers login
+    document.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        checkAdmin();
+      }
+    });
+
+    function checkAdmin() {
+      const id = idInput.value.trim();
+      const pass = passInput.value.trim();
+
+      if (id === adminCredentials.id && pass === adminCredentials.pass) {
+        message.style.color = "green";
+        message.textContent = "✅ Welcome admin...";
+        setTimeout(() => {
+          window.location.href = "database-dashboard.html"; // You can create this page later
+        }, 1500);
+      } else {
+        message.style.color = "red";
+        message.textContent = "❌ Invalid ID or Password";
+      }
+    }
+  </script>
+</body>
+</html>

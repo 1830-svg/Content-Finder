@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info About Robotics</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+
+<style>
+:root {
+  --primary1: #4a90e2;
+  --primary2: #00c9a7;
+  --primary3: #d4f5fa;
+  --primary4: #f1f8e9;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--primary1), var(--primary2), var(--primary3), var(--primary4));
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* ===== CONTAINER ===== */
+.detail-container {
+  max-width: 950px;
+  margin: 80px auto;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  padding: 40px 60px;
+  position: relative;
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== BACK BUTTON ===== */
+.back {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: linear-gradient(135deg, var(--primary2), var(--primary1));
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.back:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* SVG ARROW */
+.back svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* ===== IMAGE ===== */
+.detail-container img {
+  width: 290px;
+  display: block;
+  margin: 40px auto 20px;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.2));
+}
+
+/* ===== TITLE ===== */
+.detail-container h1 {
+  text-align: center;
+  color: var(--primary1);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* ===== CONTENT ===== */
+#topicContent {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  animation: fadeText 0.8s ease;
+}
+
+@keyframes fadeText {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ===== SCROLLBAR ===== */
+#topicContent::-webkit-scrollbar {
+  width: 8px;
+}
+#topicContent::-webkit-scrollbar-thumb {
+  background: var(--primary2);
+  border-radius: 6px;
+}
+#topicContent::-webkit-scrollbar-thumb:hover {
+  background: var(--primary1);
+}
+h3{
+  text-decoration: underline;
+}
+h2{
+  color:rgb(0, 135, 245);
+}
+ol {
+  list-style-type: disc;  
+}
+.more-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(135deg, #00c9a7, #4a90e2);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 25px auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.more-btn:hover {
+  background: linear-gradient(135deg, #4a90e2, #00c9a7);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+.card-menu-wrapper {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+}
+
+.card-menu-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.card-menu-btn svg {
+ stroke: #fff;
+}
+
+    /* ===== Dropdown Menu ===== */
+    .card-menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      min-width: 260px;
+      max-height: 280px;
+      overflow-y: auto;
+      border-radius: 12px;
+      padding: 12px;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7, #d4f5fa, #f1f8e9);
+      background-size: 400% 400%;
+      animation: menuGradient 8s ease infinite;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    @keyframes menuGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== Buttons inside Dropdown ===== */
+    .card-menu-dropdown button {
+      display: block;
+      width: 100%;
+      background: transparent;
+      color: #000;
+      border: 1.5px solid #000;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 6px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: left;
+    }
+
+    .card-menu-dropdown button:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateX(6px);
+    }
+
+    .card-menu-wrapper.open .card-menu-dropdown {
+      display: block;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="detail-container">
+  <div class="back" onclick="goBack()">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </div>
+
+  <img id="topicImg" src="data:image/jpeg;base64,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" alt="Topic Icon">
+  <h1 id="topicTitle">Robotics</h1>
+<div class="card-menu-wrapper">
+      <button class="card-menu-btn" aria-label="Open menu" title="Menu" onclick="toggleMenu()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="card-menu-dropdown" id="menu">
+        <button onclick="scrollToSection('intro')">Introduction</button>
+        <button onclick="scrollToSection('component')">Components of a Robot</button>
+      </div>
+    </div>
+  <div id="topicContent">
+    <section id="intro">
+    <h2>Introduction</h2>
+    <p><i>Robotics is an interdisciplinary field encompassing the design, construction, and operation of robots, which are machines that can perform tasks autonomously or semi-autonomously. Its history traces from early automatons to modern AI-powered machines, and its applications are vital in areas like manufacturing, healthcare, military, and space exploration. The importance of robotics lies in its ability to perform dangerous, repetitive, or highly precise tasks, increase efficiency, and assist humans in various capacities.  </i></p>
+<h3>History and Evolution of Robotics</h3><button class="more-btn" onclick="openGallery()">For gallery</button>
+<p><b>Early concepts: </b>The idea of artificial beings dates back to ancient times with automatons and figures like the flying pigeon invented by Archytus of Tarentum in 400 B.C. </p>
+<p><b>20th-century origin: </b>The term "robot" was coined by playwright Karel Čapek in his 1920 play R.U.R. (Rossum's Universal Robots), derived from the Czech word robota meaning "forced labor". </p>
+<p><b>Modern industrial robotics: </b>The modern era began with the development of industrial robots in the 1950s and 1960s. The Shakey robot, developed in 1966, was a milestone as the first mobile robot that could perceive and understand its environment. </p>
+<p><b>Advanced development: </b>The late 20th and early 21st centuries have seen a significant advancement in robotics, with the integration of sensors, AI, and machine learning, leading to more sophisticated and versatile machines. </p>
+<h3>Importance and Applications of Robotics</h3>
+<p><b>Increased efficiency: </b>Robots can work tirelessly and with high precision, leading to increased productivity and efficiency in industries like manufacturing and logistics. </p>
+<p><b>Dangerous and repetitive tasks: </b>They can perform tasks in hazardous environments (e.g., bomb disposal, deep-sea exploration) or handle monotonous, repetitive tasks that are prone to human error. </p>
+<p><b>Assisting humans: </b>Robots are increasingly used to assist humans in various ways, from performing complex surgeries to providing social and emotional support through conversation. </p>
+<p><b>Expanding human capabilities: </b>Robotics enables tasks that were previously impossible, such as the microscopic robots being developed for targeted drug delivery and surgery. </p>
+<h3>Branches of Robotics</h3>
+<p><b>Industrial Robotics: </b>Focuses on robots used in manufacturing, such as those for welding, painting, and assembly, which can operate with high speed and precision. </p>
+<p><b>Medical Robotics: </b>Involves robots used in healthcare, such as surgical robots, diagnostic tools, and those that provide physical or social assistance. </p>
+<p><b>Military and Defense Robotics: </b>Includes robots for reconnaissance, bomb disposal, surveillance, and other support roles in military operations. </p>
+<p><b>Service Robotics: </b>A broad category that includes robots for personal use (e.g., vacuum cleaners), as well as those in commercial services like cleaning and delivery. </p>
+<p><b>Space and Exploration Robotics: </b>Robots like rovers used to explore other planets and robotic arms on the International Space Station are examples of robotics in space exploration. </p>
+<p><b>Agriculture Robotics: </b>Uses robots for tasks like automated harvesting, planting, and monitoring crops. </p>
+</section>
+<section id="component">
+<h2>Components of a Robot</h2>
+<p><i>A robot is made of several key components: sensors gather data from the environment, actuators perform actions, controllers (like microprocessors) process data and make decisions, power supply systems provide energy, and communication modules enable data exchange. These components work together, with sensors perceiving, controllers processing, actuators executing, and power and communication systems supporting the overall function.  </i></p>
+<h3>Sensors</h3>
+<p><b>Function: </b>Act as the "eyes and ears" of a robot, detecting changes in the environment. </p>
+<p><b>Types:</b></p>
+<p><b>Proximity/Distance: Detect nearby objects without contact (e.g., ultrasonic, infrared, laser). </b></p>
+<p><b>Touch/Force: </b>Detect physical contact and measure applied force, often used in grippers. </p>
+<p><b>Vision: </b>Use cameras and LiDAR for tasks like object detection and navigation. </p>
+<p><b>Inertial: </b>Measure motion, such as gyroscopes and accelerometers.</p> 
+<h3>Actuators and Motors</h3>
+<p><b>Function: </b>Convert energy into movement or force to perform actions. </p>
+<p><b>Types:</b></p>
+<p><b>Electric Motors: </b>Convert electrical energy into mechanical energy (e.g., DC, AC, stepper, servo motors).</p> 
+<p><b>Hydraulic and Pneumatic: </b>Use fluid power to create movement, common in industrial robots. </p>
+<p><b>Other: </b>Can include elements like solenoids and linear actuators. </p>
+<h3>Controllers and Microprocessors</h3>
+<p><b>Function: </b>The "brain" of the robot, processing sensor data and executing commands. </p>
+<p><b>Components:</b></p>
+<p><b>Microprocessor/Microcontroller: </b>The central processing unit that takes input from sensors and sends output signals to actuators. </p>
+<p><b>Embedded Systems: </b>Often a microcontroller or a more complex system is embedded to handle specific tasks like navigation or motor control.</p> 
+<h3>Power Supply Systems</h3>
+<p><b>Function: </b>Provide the energy for the robot to operate.</p>
+<p><b>Types:</b></p>
+<p><b>Batteries: </b>A common portable power source.</p>
+<p><b>Mains Power: </b>For stationary industrial robots.</p>
+<p><b>Other: </b>Can include hydraulic, pneumatic, or solar power sources. </p>
+<h3>Communication Modules</h3>
+<p><b>Function: </b>Enable the robot to exchange data with other systems or operators.</p> 
+<p><b>Examples:</b></p>
+<p><b>Wireless: </b>Wi-Fi, Bluetooth, and radio frequency (RF) for remote control and data transfer. </p>
+<p><b>Wired: </b>Ethernet and other serial communication protocols. </p>
+<p><b>IoT Connectivity: </b>Allows robots to connect to the Internet of Things (IoT) for integration with other devices. </p>
+
+    </div>
+</div>
+</section>
+<script>
+function goBack() {
+  window.history.back();
+}
+function openGallery() {
+    // Redirects to gallery.html when button clicked
+    window.location.href = "gallery2.html";
+  }
+  function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      document.getElementById("menu").style.display = "none";
+    }
+
+    // Hide menu when clicking outside
+    document.addEventListener("click", (event) => {
+      const menu = document.getElementById("menu");
+      const button = document.querySelector(".card-menu-btn");
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+
+</script>
+
+</body>
+</html>

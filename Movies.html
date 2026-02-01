@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info About Movie</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<style>
+:root {
+  --primary1: #4a90e2;
+  --primary2: #00c9a7;
+  --primary3: #d4f5fa;
+  --primary4: #f1f8e9;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--primary1), var(--primary2), var(--primary3), var(--primary4));
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* ===== CONTAINER ===== */
+.detail-container {
+  max-width: 950px;
+  margin: 80px auto;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  padding: 40px 60px;
+  position: relative;
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== BACK BUTTON ===== */
+.back {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: linear-gradient(135deg, var(--primary2), var(--primary1));
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.back:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* SVG ARROW */
+.back svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* ===== IMAGE ===== */
+.detail-container img {
+  width: 290px;
+  display: block;
+  margin: 40px auto 20px;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.2));
+}
+
+/* ===== TITLE ===== */
+.detail-container h1 {
+  text-align: center;
+  color: var(--primary1);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* ===== CONTENT ===== */
+#topicContent {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  animation: fadeText 0.8s ease;
+}
+
+@keyframes fadeText {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ===== SCROLLBAR ===== */
+#topicContent::-webkit-scrollbar {
+  width: 8px;
+}
+#topicContent::-webkit-scrollbar-thumb {
+  background: var(--primary2);
+  border-radius: 6px;
+}
+#topicContent::-webkit-scrollbar-thumb:hover {
+  background: var(--primary1);
+}
+h3{
+  text-decoration: underline;
+}
+h2{
+  color:rgb(0, 135, 245);
+}
+ol {
+  list-style-type: disc;  
+}
+.card-menu-wrapper {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .card-menu-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-menu-btn svg {
+      stroke: #fff;
+    }
+
+    /* ===== Dropdown Menu ===== */
+    .card-menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      min-width: 260px;
+      max-height: 280px;
+      overflow-y: auto;
+      border-radius: 12px;
+      padding: 12px;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7, #d4f5fa, #f1f8e9);
+      background-size: 400% 400%;
+      animation: menuGradient 8s ease infinite;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    @keyframes menuGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== Buttons inside Dropdown ===== */
+    .card-menu-dropdown button {
+      display: block;
+      width: 100%;
+      background: transparent;
+      color: #000;
+      border: 1.5px solid #000;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 6px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: left;
+    }
+
+    .card-menu-dropdown button:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateX(6px);
+    }
+
+    .card-menu-wrapper.open .card-menu-dropdown {
+      display: block;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="detail-container">
+  <div class="back" onclick="goBack()">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </div>
+
+  <img id="topicImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfo3_UE6ksO6lIhan-e1H2jOLuSqY_gIjZog&s" alt="Topic Icon">
+  <h1 id="topicTitle">Movies & Cinema</h1>
+  <div class="card-menu-wrapper">
+      <button class="card-menu-btn" aria-label="Open menu" title="Menu" onclick="toggleMenu()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="card-menu-dropdown" id="menu">
+        <button onclick="scrollToSection('intro')">Introduction to Movies</button>
+        <button onclick="scrollToSection('history')">History of Cinema</button>
+        <button onclick="scrollToSection('birth')">The Birth of Hollywood</button>
+      </div>
+    </div>
+  <div id="topicContent">
+    <section id="intro">
+    <h2>Introduction to Movies</h2>
+    <p><i>Movies are a medium of visual storytelling that uses moving images, often with sound, to create the illusion of motion and tell a narrative. Their role is multifaceted, serving as a powerful form of entertainment, a tool for communication and education, and a significant art form that can evoke emotions and explore complex ideas. Films combine elements like cinematography, editing, dialogue, and music to create immersive experiences for audiences. </i></p>
+<h3> As a medium of storytelling</h3> 
+<p><b>Narrative Construction: </b>Movies use a sequence of individual frames shown in rapid succession to create a story, a technique that relies on psychological and physiological effects like persistence of vision and beta movement to give the illusion of motion.</p>
+<p><b>Conveying Ideas: </b>They can communicate complex ideas and emotions that might be difficult to express in words alone, making them a powerful tool for expression and a significant part of modern culture.</p>
+<p><b>Aesthetic Expression: </b>Film is considered a major art form, with its own language and grammar that has evolved over time. Filmmakers use visual elements, sound, and editing to create experiences that can be abstract, representational, or narrative. </p>
+<h3>As a medium of entertainment and communication</h3>
+<p><b>Entertainment: </b>Movies are a highly popular and influential form of entertainment worldwide, providing audiences with a way to escape, be thrilled, or be moved.</p>
+<p><b>Education: </b>Beyond entertainment, films can educate and enlighten, making them a potent method for disseminating information on a mass scale.</p>
+<p><b>Cultural Impact: </b>Movies have a significant cultural impact, helping to shape how people view the world and providing a way to understand different perspectives. They can be used as a tool for cultural dialogue and even social commentary  </p>
+</section>
+<section id="history">
+<h2>History of Cinema</h2>
+<p><i>Cinema has evolved from the silent era to the digital age through technological and artistic innovations, beginning with early motion pictures and silent films, progressing to the introduction of synchronized sound and color, and eventually embracing digital technologies for production, distribution, and exhibition. This evolution has been shaped by advances in cameras, film stock, sound recording, visual effects, and digital delivery systems.  </i></p>  
+<h3>Silent Era (Late 1800s–1920s)</h3>
+<p><b>Early invention: </b>The invention of the motion picture camera and the celluloid film base in the late 1800s paved the way for a new medium. </p>
+<p><b>Silent storytelling: </b>Early films were silent, with stories conveyed through visual action and title cards. </p>
+<p><b>Emergence of stars: </b>Figures like Charlie Chaplin became global superstars, and genres like slapstick and drama were pioneered. </p>
+<p><b>Technical standards: </b>Filmmakers developed a strong understanding of the craft, establishing technical and artistic standards, such as the 24 frames per second (FPS) standard for film projection. </p>
+<h3>Sound and Color Era (1920s–1950s)</h3>
+<p><b>Introduction of sound: </b>The first "talkies" were created by synchronizing sound with images, which was a significant technical challenge. </p>
+<p><b>Growth of studios: </b>The growth of major studios and the "Golden Age of Hollywood" saw the rise of musicals, dramas, and epics. </p>
+<p><b>Introduction of color: </b>Initially, color was added through methods like tinting and stenciling. By 1932, the three-color Technicolor process became viable, though it was initially expensive. </p>
+<p><b>New technology: </b>The 1950s saw the introduction of widescreen cinema, such as Cinemascope, to compete with the rise of television. </p>
+<h3>Digital and Global Era (1980s–Present)</h3>
+<p><b>Digital technology: </b>The digital age brought about major changes, including digital cameras, non-linear editing systems, and computer-generated imagery (CGI). </p>
+<p><b>Improved visuals: </b>Digital tools allowed for more precise color correction, visual effects, and realistic CGI. </p>
+<p><b>Distribution and exhibition: </b>Digital Cinema Packages (DCPs) and satellite/internet delivery enabled simultaneous global releases. Digital projectors became the new standard in theaters. </p>
+<p><b>New viewing experiences: </b>Technology has expanded storytelling possibilities with innovations like 3D digital cinema and high frame rates (HFR). </p>
+<p><b>The rise of streaming: </b>Video-on-demand (VOD) platforms and the growth of the internet have provided unprecedented access to content and given rise to the "OTT Era". </p>
+</section>
+<section id="birth">
+<h2>The Birth of Hollywood</h2>
+<p><i>The birth of Hollywood emerged from a strategic relocation of American filmmakers in the early 20th century, allowing them to escape Thomas Edison's patent monopoly on the East Coast. The move to Southern California capitalized on a year-round sunny climate and diverse landscapes, which enabled a rapid, factory-like production model known as the studio system. Through economic power, technological innovation, and cultural influence, Hollywood quickly dominated American cinema and established an enduring global presence.</i></p>
+<h3>Factors in Hollywood's rise</h3>
+<p><b>Escape from Edison's Trust: </b>The Motion Picture Patents Company (MPPC), controlled by Thomas Edison, aggressively prosecuted independent filmmakers who used his patented camera equipment without paying licensing fees. To escape these legal challenges and the MPPC's monopoly, filmmakers moved across the country to California.</p>
+<p><b>Favorable geography: </b>Southern California offered filmmakers reliable sunshine for outdoor shoots and a wide variety of terrain, from mountains to deserts and coastlines, all within a short distance. This allowed for more efficient and diverse filmmaking.</p>
+<p><b>Rise of the studio system: </b>By the 1920s, a handful of powerful studios, including Paramount, MGM, and Warner Bros., gained control over every stage of the filmmaking process, from production and distribution to exhibition in their own theaters. This practice, known as vertical integration, secured profits and allowed for mass production.</p>
+<p><b>Technological innovation: </b>The industry transitioned from silent films to "talkies" with the release of The Jazz Singer in 1927. This shift, along with the later introduction of Technicolor, solidified Hollywood's technical dominance and created new genres like musicals.</p>
+<p><b>The star system: </b>The studio system perfected the marketing of actors, grooming them into "movie stars" and signing them to long-term contracts. Icons like Mary Pickford and Charlie Chaplin guaranteed a film's box office success and fostered a culture of celebrity that captivated audiences. </p>
+<h3>Hollywood's global influence</h3>
+<p><b>World War I: </b>While Europe's film industry was devastated by the war, the American film industry was largely unaffected and was able to expand its international distribution networks. By the late 1910s, Hollywood had replaced Europe as the global leader in cinema.</p>
+<p><b>Cultural power and soft imperialism: </b>Hollywood became a primary vehicle for American cultural values. Themes of individualism and consumerism were packaged into compelling stories that appealed to worldwide audiences, potentially overwhelming local cultures.</p>
+<p><b>Dominant economic model: </b>The export success of Hollywood's films has been replicated by multinational media conglomerates today, influencing filmmaking trends and business practices in other countries. The use of advanced technology and large budgets, which other industries often cannot match, has allowed it to maintain its foothold.</p>
+<p><b>Adaptation and market penetration: </b>As globalization advanced, Hollywood studios engaged in co-productions and partnerships with foreign entities to gain access to lucrative markets, such as China and India.</p>
+<p><b>Inspiration and imitation: </b>The <i>"Hollywoodization"</i> of cinema has led local filmmakers in some countries to adopt Western styles and themes, sometimes at the expense of traditional narratives. Conversely, Hollywood itself has borrowed from the techniques and talent of global cinema.</p>
+<h2>The Birth of Hollywood </h2>
+<p><i>The American film industry, synonymous with Hollywood, became a global force in the early 20th century by centralizing production on the West Coast to escape Thomas Edison's patents and capitalize on Southern California's resources. This led to the development of the studio system, the creation of a powerful star system, and the introduction of groundbreaking sound and color technologies that secured its dominance for decades.</i></p>
+</div>
+</div>
+</section>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      document.getElementById("menu").style.display = "none";
+    }
+
+    // Hide menu when clicking outside
+    document.addEventListener("click", (event) => {
+      const menu = document.getElementById("menu");
+      const button = document.querySelector(".card-menu-btn");
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+</script>
+
+</body>
+</html>

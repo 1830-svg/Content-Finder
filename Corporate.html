@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info About Corporate</title>
+<link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLpgtK-GBtjugW2OfxDgeItTMJPWy2FLPI3w&s">
+
+<style>
+:root {
+  --primary1: #4a90e2;
+  --primary2: #00c9a7;
+  --primary3: #d4f5fa;
+  --primary4: #f1f8e9;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--primary1), var(--primary2), var(--primary3), var(--primary4));
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* ===== CONTAINER ===== */
+.detail-container {
+  max-width: 950px;
+  margin: 80px auto;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  padding: 40px 60px;
+  position: relative;
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== BACK BUTTON ===== */
+.back {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: linear-gradient(135deg, var(--primary2), var(--primary1));
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.back:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* SVG ARROW */
+.back svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* ===== IMAGE ===== */
+.detail-container img {
+  width: 290px;
+  display: block;
+  margin: 40px auto 20px;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.2));
+}
+
+/* ===== TITLE ===== */
+.detail-container h1 {
+  text-align: center;
+  color: var(--primary1);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* ===== CONTENT ===== */
+#topicContent {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  animation: fadeText 0.8s ease;
+}
+
+@keyframes fadeText {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ===== SCROLLBAR ===== */
+#topicContent::-webkit-scrollbar {
+  width: 8px;
+}
+#topicContent::-webkit-scrollbar-thumb {
+  background: var(--primary2);
+  border-radius: 6px;
+}
+#topicContent::-webkit-scrollbar-thumb:hover {
+  background: var(--primary1);
+}
+h3{
+  text-decoration: underline;
+}
+h2{
+  color:rgb(0, 135, 245);
+}
+ol {
+  list-style-type: disc;  
+}
+ .card-menu-wrapper {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .card-menu-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-menu-btn svg {
+      stroke: #fff;
+    }
+
+    /* ===== Dropdown Menu ===== */
+    .card-menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      min-width: 260px;
+      max-height: 280px;
+      overflow-y: auto;
+      border-radius: 12px;
+      padding: 12px;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7, #d4f5fa, #f1f8e9);
+      background-size: 400% 400%;
+      animation: menuGradient 8s ease infinite;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    @keyframes menuGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== Buttons inside Dropdown ===== */
+    .card-menu-dropdown button {
+      display: block;
+      width: 100%;
+      background: transparent;
+      color: #000;
+      border: 1.5px solid #000;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 6px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: left;
+    }
+
+    .card-menu-dropdown button:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateX(6px);
+    }
+
+    .card-menu-wrapper.open .card-menu-dropdown {
+      display: block;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="detail-container">
+  <div class="back" onclick="goBack()">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </div>
+
+  <img id="topicImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-EGkRxs9hiwJdm54-tnRZMM-YdPMHVfe8Mg&s" alt="Topic Icon">
+  <h1 id="topicTitle">Corporate World</h1>
+   <div class="card-menu-wrapper">
+      <button class="card-menu-btn" aria-label="Open menu" title="Menu" onclick="toggleMenu()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="card-menu-dropdown" id="menu">
+        <button onclick="scrollToSection('intro')">Introduction to the Corporate World</button>
+        <button onclick="scrollToSection('history')">History and Growth of Corporates</button>
+        <button onclick="scrollToSection('types')">Types of Corporate Structures</button>
+      </div>
+    </div>
+  <div id="topicContent">
+    <section id="intro">
+  <h2>Introduction to the Corporate World</h2>
+  <p><i>The corporate sector is the part of the economy composed of privately-owned businesses and corporations that operate to generate a profit for their shareholders or owners. As a major engine of economic growth, the corporate world drives innovation, creates jobs, and produces goods and services. </i></p>  
+<h3>Core characteristics of corporations</h3>
+<ol>
+<li><b>Legal existence:</b> A corporation is a distinct legal entity, separate from its owners. This means the corporation can enter into contracts, own assets, sue, and be sued in its own name.</li>
+<li><b>Limited liability: </b>In most cases, a corporation protects its owners (shareholders) from personal liability for the company's debts and legal obligations. The owners' liability is limited to the amount they have invested in the company.</li>
+<li><b>Continuity of existence:</b> A corporation can continue to exist beyond the lifespan of its owners. Ownership is easily transferable through the sale or gift of shares.</li>
+<li><b>Shareholder ownership:</b> Corporations are owned by shareholders who purchase shares of stock. These shareholders are entitled to a share of the company's profits and losses. </li>
+</ol>
+<h3>Key roles in the economy</h3>
+<ol>
+<li><b>Driving economic growth:</b> By producing goods and services, the corporate sector contributes significantly to a country's gross domestic product (GDP). Through innovation and investment, corporations increase overall economic output.</li>
+<li><b>Creating jobs:</b> Corporations are major employers, offering job opportunities across various industries and skill levels. As companies expand, they create new positions, which supports livelihoods and boosts economic stability.</li>
+<li><b>Fostering innovation:</b> Large corporations often invest heavily in research and development (R&D), which leads to new products, technologies, and more efficient business processes. This innovation drives progress and keeps an economy competitive.</li>
+<li><b>Facilitating capital flows:</b> The corporate sector provides avenues for investment. Publicly traded companies raise capital by selling stock on exchanges, and banks provide corporate loans for business expansion and projects.</li>
+<li><b>Encouraging competition:</b> The competitive marketplace is driven by corporations vying for market share. This competition incentivizes companies to become more efficient, improve quality, and offer better prices, which benefits consumers.</li>
+<li><b>Engaging in corporate social responsibility (CSR):</b> Beyond their profit-driven activities, many corporations engage in social and environmental initiatives. Through CSR, they address public interest issues and support community development projects. </li>
+</ol>
+<h3>How the corporate world functions</h3>
+<ol>
+<li><b>The corporate world operates through a structured system with distinct management and ownership components. </li>
+<li><b>Corporate governance:</b> Corporations are overseen by a board of directors, which is elected by the shareholders. The board is responsible for the company's strategic direction and for ensuring that the executives manage the company's day-to-day operations in the best interest of the shareholders.</li>
+<li><b>Strategic business operations:</b> Companies conduct business by managing finances, producing goods, marketing products, and distributing them to consumers. The specific function of a company within the economy is defined by its industry. For instance, a manufacturing corporation creates goods, while a financial services corporation offers banking and investment products.</li>
+<li><b>Legal and regulatory compliance:</b> All corporations must operate within a legal framework and adhere to various regulations. Regulatory bodies and corporate laws ensure accountability, transparency, and ethical conduct.</li>
+<li><b>Capital allocation:</b> Financial managers within corporations make decisions on how to use capital to generate the highest possible returns for shareholders. These decisions include investing in new projects, issuing dividends, or acquiring other companies. </li>
+</ol>
+<h3>Types of corporations and business entities</h3>
+<ol>
+<li><b>C Corporation: The most common form of incorporation for larger companies. C corps are taxed separately from their owners, who are also taxed on their dividends (a practice known as "double taxation"). C corps can have an unlimited number of shareholders.</li>
+<li><b>S Corporation: Created to avoid double taxation. Profits and losses are passed directly to the owners' personal income taxes. There are limitations on the number and type of shareholders an S corp can have.</li>
+<li><b>Limited Liability Company (LLC): Offers the owners (members) limited liability protection similar to a corporation but with the tax flexibility of a partnership. It is often simpler to operate than a full corporation.</li>
+<li><b>Nonprofit Corporation: An organization that exists to benefit the public rather than generate profits for shareholders. Nonprofits are exempt from taxes and can receive donations from various sources.</li>
+<li><b>Public vs. Private Companies: A private company's shares are not traded on a stock exchange. A public company, in contrast, offers its shares to the general public, providing greater access to capital but with more regulatory requirements.   </li>
+</ol>
+</section>
+<section id="history">
+<h2>History and Growth of Corporates</h2>
+<p><i>The evolution of corporations transformed traditional businesses into global enterprises through landmark legal developments, the Industrial Revolution, and technological advancements. Starting with ancient associations, the corporate form developed limited liability and a separate legal identity, enabling large-scale, international ventures. This growth led to the rise of powerful multinational corporations (MNCs) that operate across the globe today. </i></p>
+<h3>Early corporate roots (Ancient to 17th century)</h3>
+<ol>
+<li><b>Ancient entities:</b> The concept of a corporate entity dates back to Roman law, which recognized associations and groups like municipalities as legal bodies. These early forms could own property, make contracts, and perform legal acts through representatives.</li>
+<li><b>Medieval guilds and institutions:</b> In medieval Europe, the corporate form was used for guilds, cities, and universities, allowing them to exist in perpetuity beyond the lives of their individual members. Business ventures largely operated as partnerships, which offered no protection of assets beyond the initial investment.</li>
+<li><b>Chartered trading companies:</b> The forerunners of modern corporations emerged in the 17th century with the creation of state-sponsored, chartered companies like the Dutch East India Company and the British East India Company. These entities were granted government monopolies to exploit trade routes and establish colonies, pooling capital from many investors through joint-stock shares. This structure enabled them to fund massively expensive long-distance trading ventures. </li>
+</ol>
+<h3>The Industrial Revolution and modern corporate law</h3>
+<ol>
+<li><b>Abolition of mercantilist monopolies:</b> In the late 18th century, the rise of laissez-faire economic theory challenged the government-granted monopolies of chartered companies. Economists like Adam Smith argued that corporations managed with others' money were less efficient than private enterprises.</li>
+<li><b>Establishment of limited liability:</b> A key legal development was the creation of limited liability, which separated a company's debts and assets from its investors' personal finances.</li>
+<li><b>UK:</b> The Joint Stock Companies Act of 1844 simplified the incorporation process, and the Limited Liability Act of 1855 formalized this protection. A subsequent magazine article retrospectively called this "one of the greatest discoveries of the age".</li>
+<li><b>US:</b> Following the Civil War, US states began passing more lenient "enabling" laws that made incorporation easier and fueled an increase in the number of corporations.</li>
+<li><b>Growth during the Gilded Age:</b> The Industrial Revolution, spurred by the new corporate structure, led to large-scale enterprises in railroads, steel, and oil. These companies, such as John D. Rockefeller's Standard Oil, grew into powerful trusts that dominated national markets. Public concerns over these monopolies led to early antitrust laws in the late 19th and early 20th centuries. </li>
+</ol>
+<h3>The rise of multinational corporations (MNCs)</h3>
+<ol>
+<li><b>Post-World War II expansion:</b> The post-war era saw an acceleration of MNC growth, initially dominated by US-based firms like Coca-Cola and IBM. Drivers for this expansion included:</li>
+<li><b>Technological advances in communication and transport</li>
+<li><b>Economic liberalization and falling trade barriers</li>
+<li><b>The desire for new markets and access to cheaper labor and resources</li>
+<li><b>Growth in emerging markets:</b> The late 20th and early 21st centuries saw the liberalization of economies in developing and former communist countries like India, China, and Brazil. This opened new markets for foreign investment and facilitated the growth of new MNCs originating from these countries. </li>
+</ol>
+<h3>The technological and digital revolution</h3>
+<ol>
+<li><b>Streamlined operations:</b> Technology has transformed corporate operations by enabling automation, enhanced communication, and data-driven decision-making.</li>
+<li><b>New business models:</b> The rise of cloud computing, e-commerce, and advanced analytics reshaped corporate business models, with tech giants like Apple, Alphabet (Google), and Amazon now ranking among the world's largest companies.</li>
+<li><b>Digital reach:</b> Today, digital platforms and global supply chains allow even small companies to operate internationally, creating a new wave of "micro-multinationals".</li>
+<li><b>Digital risks:</b> The increased reliance on technology has also introduced new challenges for corporations, such as cybersecurity threats and data breaches. </li>
+</ol>
+<h3>Modern corporate debates and future trends</h3>
+<ol>
+<li><b>Governance and stakeholder focus:</b> Recent decades have seen renewed debate over corporate governance and responsibility. The 2020s in particular brought a greater focus on environmental, social, and governance (ESG) standards.</li>
+<li><b>Stakeholder vs. shareholder primacy:</b> Some corporations have shifted toward a stakeholder model, considering the interests of employees, customers, and communities, not just shareholders. Some states have even enabled "benefit corporations" to operate for both profit and public benefit.</li>
+<li><b>Influence and criticism:</b> The growing economic and political influence of MNCs has prompted ongoing debates over their impact on local economies, environmental sustainability, and labor practices. The evolution of corporations from simple partnerships to powerful global entities reflects their profound and ever-changing role in shaping society. </li>
+</ol>
+</section>
+<section id="types">
+<h2>Types of Corporate Structures</h2>
+<p><i>Corporate structures are categorized by ownership and public vs. private status, and include private limited companies, which are privately held, and public companies, which offer shares to the public. While startups are a stage of a company's life cycle and can be structured in various ways, a multinational corporation is a large company with operations in multiple countries, often using different organizational structures such as a global product, area, functional, or matrix division</i></p>
+<h3>Private limited company</h3>
+<p><b>b>Definition:</b> A company that is privately owned and issues shares to a select group of shareholders, not the general public. </p>
+<p><b>Liability:</b> Shareholders' liability is limited to the amount of their investment in the company. </p>
+<p><b>Trading:</b> Shares are not traded on a public stock exchange. </p>
+<h3>Public company</h3>
+<p><b>Definition:</b> A company that is allowed to offer shares of its stock to the general public, either through a public exchange or private placement. </p>
+<p><b>Regulation:</b> Subject to stricter reporting and regulatory requirements due to public ownership. </p>
+<p><b>Types:</b> Can be listed (shares traded on a stock exchange) or unlisted. </p>
+<h3>Startup</h3>
+<p><b>Definition:</b> A company in its early stages of development, characterized by rapid growth and a search for a repeatable and scalable business model. </p>
+<p><b>Structure:</b> A startup can have various legal structures, such as a private limited company, or a different one depending on its needs. </p>
+<h3>Multinational corporation (MNC)</h3>
+<p><b>Definition:</b> A large corporation that operates in multiple countries, with a headquarters in one country and subsidiaries, branches, or joint ventures in others. </p>
+<p><b>Structure:</b> Uses various structures to manage its global operations, such as a global product, area, functional divisions, or a matrix structure. </p>
+</div>
+</div>
+</section>
+<script>
+function goBack() {
+  window.history.back();
+}
+function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      document.getElementById("menu").style.display = "none";
+    }
+
+    // Hide menu when clicking outside
+    document.addEventListener("click", (event) => {
+      const menu = document.getElementById("menu");
+      const button = document.querySelector(".card-menu-btn");
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+</script>
+
+</body>
+</html>

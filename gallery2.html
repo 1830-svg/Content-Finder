@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery | Content Finder</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <style>
+  /* ====== Background Gradient (same as your theme) ====== */
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4a90e2, #00c9a7, #d4f5fa, #f1f8e9);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    color: #333;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ====== Page Title ====== */
+  header {
+    text-align: center;
+    padding: 35px 20px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+  /* ====== Gallery Container (only 3 cards total) ====== */
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  /* ====== Image Cards ====== */
+  .photo-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    height: 280px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .photo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .photo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .photo-card h3 {
+    text-align: center;
+    padding: 8px 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  /* ====== Heading ====== */
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #0f0e0e;
+    font-weight: 600;
+    margin-top: 50px;
+  }
+</style>
+
+</head>
+
+<body>
+  <header>📸 Evolution of Robotics</header>
+  <div class="heading">
+<h3></h3>
+</div>
+  <div class="gallery-container">
+    <div class="photo-card">
+      <img src="https://greekreporter.com/wp-content/uploads/2025/06/Archytas-pigeon-Credit-Greek-Reporter-archive.png" alt="Gallery Image 1" />
+      <h3><b>flying pigeon invented by Archytus of Tarentum in 400 B.C. </b></h3>
+    </div>
+
+    <div class="photo-card">
+      <img src="https://i.pinimg.com/736x/24/c6/56/24c65685b18f8302bfc45e6d0d1d9fb9.jpg" alt="Gallery Image 2" />
+      <h3><b>1954 — Birth of the First Industrial Robot</b></h3>
+    </div>
+
+    <div class="photo-card">
+      <img src="https://m.economictimes.com/thumb/msid-71633429,width-1200,height-900,resizemode-4,imgsize-980528/sophia-is-known-for-human-like-appearance-and-behaviour-compared-to-previous-robotic-variants-.jpg" alt="Gallery Image 3" />
+      <h3><b>2016 — Rise of Human-Like Robots (Sophia the Robot)</b></h3>
+    </div>
+    </div>
+    </div>
+  </section>
+</body>
+</html>

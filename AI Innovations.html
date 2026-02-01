@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info About Ai innovation</title>
+<link rel="icon" type="image/png" href="https://media.istockphoto.com/id/1452604857/photo/businessman-touching-the-brain-working-of-artificial-intelligence-automation-predictive.jpg?s=612x612&w=0&k=20&c=GkAOxzduJbUKpS2-LX_l6jSKtyhdKlnPMo2ito4xpR4=">
+
+<style>
+:root {
+  --primary1: #4a90e2;
+  --primary2: #00c9a7;
+  --primary3: #d4f5fa;
+  --primary4: #f1f8e9;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--primary1), var(--primary2), var(--primary3), var(--primary4));
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* ===== CONTAINER ===== */
+.detail-container {
+  max-width: 950px;
+  margin: 80px auto;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  padding: 40px 60px;
+  position: relative;
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== BACK BUTTON ===== */
+.back {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: linear-gradient(135deg, var(--primary2), var(--primary1));
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.back:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* SVG ARROW */
+.back svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* ===== IMAGE ===== */
+.detail-container img {
+  width: 150px;
+  display: block;
+  margin: 40px auto 20px;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.2));
+}
+
+/* ===== TITLE ===== */
+.detail-container h1 {
+  text-align: center;
+  color: var(--primary1);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* ===== CONTENT ===== */
+#topicContent {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  animation: fadeText 0.8s ease;
+}
+
+@keyframes fadeText {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ===== SCROLLBAR ===== */
+#topicContent::-webkit-scrollbar {
+  width: 8px;
+}
+#topicContent::-webkit-scrollbar-thumb {
+  background: var(--primary2);
+  border-radius: 6px;
+}
+#topicContent::-webkit-scrollbar-thumb:hover {
+  background: var(--primary1);
+}
+h3{
+  text-decoration: underline;
+}
+h2{
+  color:rgb(0, 135, 245);
+}
+ol {
+  list-style-type: disc;  
+}
+.card-menu-wrapper {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+}
+
+.card-menu-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.card-menu-btn svg {
+ stroke: #fff;
+}
+
+    /* ===== Dropdown Menu ===== */
+    .card-menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      min-width: 260px;
+      max-height: 280px;
+      overflow-y: auto;
+      border-radius: 12px;
+      padding: 12px;
+      background: linear-gradient(135deg, #4a90e2, #00c9a7, #d4f5fa, #f1f8e9);
+      background-size: 400% 400%;
+      animation: menuGradient 8s ease infinite;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    @keyframes menuGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== Buttons inside Dropdown ===== */
+    .card-menu-dropdown button {
+      display: block;
+      width: 100%;
+      background: transparent;
+      color: #000;
+      border: 1.5px solid #000;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin: 6px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: left;
+    }
+
+    .card-menu-dropdown button:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateX(6px);
+    }
+
+    .card-menu-wrapper.open .card-menu-dropdown {
+      display: block;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="detail-container">
+  <div class="back" onclick="goBack()">
+    <svg viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+    </svg>
+  </div>
+
+  <img id="topicImg" src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Topic Icon">
+  <h1 id="topicTitle">Artificial Intelligence</h1>
+  <div class="card-menu-wrapper">
+      <button class="card-menu-btn" aria-label="Open menu" title="Menu" onclick="toggleMenu()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="card-menu-dropdown" id="menu">
+        <button onclick="scrollToSection('Structure')">Structure of an AI</button>
+        <button onclick="scrollToSection('project')">Project</button>
+        <button onclick="scrollToSection('jobs')">Jobs</button>
+      </div>
+    </div>
+  <div id="topicContent">
+     <p>AI focuses on creating intelligent machines that can simulate human reasoning, learning, and perception.</p>
+      <p>It powers innovations like self-driving cars, virtual assistants, and predictive analytics.</p>
+     <section id="Structure">
+      <h2>Structure of an AI </h2>
+<h3>Core components:</h3>
+<p>A generalized AI agent is built from several essential parts that enable intelligent behavior </p> 
+<p><b>Perception layer: </b>Gathers raw data from the environment using inputs like cameras, microphones, or data streams. This is the AI's "senses."</p> 
+<p><b>Processing and reasoning layer: </b>Interprets the data from the perception layer to draw conclusions and form plans. This is the AI's "thinking" stage, using logic, probabilities, and learned models.</p>  
+<p><b>Learning layer: </b>The most revolutionary part of modern AI. It allows the system to adapt and improve its performance over time by extracting lessons from past experiences and data. This is achieved through different types of machine learning, such as supervised, unsupervised, and reinforcement learning.</p>
+<p><b>Action layer: </b>Executes the decisions made by the reasoning layer, affecting the environment either physically (via robots) or digitally (via software output). </p>
+<h3>Key branches and techniques</h3>
+<p>The four layers above can be implemented using various AI branches and techniques </p>
+<p><b>Machine Learning (ML): </b>A subset of AI focused on building systems that learn from data to make predictions or decisions. This is the primary method for enabling the learning layer.</p>
+<p><b>Deep Learning (DL): </b>A specialized subset of machine learning that uses multi-layered artificial neural networks. These deep networks are particularly effective at identifying complex patterns in large datasets and are the engine for many advanced AI applications.</p>
+<p><b>Natural Language Processing (NLP): </b>A branch that enables machines to understand, interpret, and generate human language. It is crucial for the perception and reasoning layers of conversational AI systems like chatbots.</p>
+<p><b>Computer Vision: </b>Enables machines to "see" and interpret visual information from images and videos. This is a core part of the perception layer for technologies like autonomous vehicles.</p>
+<p><b>Expert Systems: </b>Use predefined rules and knowledge bases to simulate the decision-making of human experts, residing primarily within the reasoning layer. </p>
+</section>
+<section id="project">
+<h2>Project</h2>
+<p>Artificial intelligence (AI) projects apply AI technologies </p>
+<h3>Beginner and intermediate AI projects:</h3>
+<p><b>Chatbots: </b>Create a program that can simulate a conversation with a user using NLP. They are used for customer service, virtual assistants, or educational support.</p>
+<p><b>Image recognition: </b>Build a model that can identify and classify objects, people, or places in an image. Common projects include</p>
+<p><ol><li>Recognizing handwritten digits (e.g., using the MNIST dataset)</li>
+<li>Detecting masks on faces in real-time.</li>
+<li>Classifying images, such as sorting pictures of cats versus dogs.</li></ol></p>
+<p><b>Handwritten digit recognition: </b>Train a model to accurately recognize handwritten digits from images using the MNIST dataset and a Convolutional Neural Network (CNN).</p>
+<p><b>Spam email detector: </b>Build a classifier that filters spam from legitimate emails using natural language processing (NLP) techniques and a machine learning algorithm like Naive Bayes.</p>
+<p><b>Fake news detector: </b>Classify news articles as real or fake by training a model on a labeled dataset using algorithms like Logistic Regression.</p>
+<p><b>Movie recommendation system:  </b>Develop an engine that suggests movies to users based on their viewing history or preferences using collaborative filtering techniques. </p>
+<h3>Intermediate-level projects</h3>
+<p><i>These projects are more challenging and require a deeper understanding of AI principles and algorithms. </i></p>
+<p><b>Sentiment analysis: </b>Develop a system to analyze product reviews, social media posts, or news articles to determine the emotional tone as positive, negative, or neutral.</p>
+<p><b>Resume parser: </b>Automate the screening process for HR departments by building a tool that uses NLP to extract and rank relevant information from resumes.</p>
+<p><b>Predictive maintenance: </b>Use sensor data from industrial machines to train a model that predicts when equipment failure might occur. This allows for scheduled maintenance and prevents costly downtime.</p>
+<p><b>Music genre classification: </b>Build an artificial neural network that can identify a song's genre by analyzing its features, such as rhythm, timbre, and pitch.</p>
+<p><b>Facial recognition system: </b>Use machine learning and deep learning to identify or verify individuals from images or videos, which has applications in security and personalized services. </p>
+<h3>Advanced-level projects</h3>
+<p><i>These are sophisticated, complex projects that often mimic or enhance human capabilities. </i></p>
+<p><b>Autonomous driving system: </b>Build a model that can process real-time data from cameras and sensors to navigate a vehicle, detect objects, and make driving decisions without human intervention.</p>
+<p><b>AI for medical diagnosis: </b>Train a deep learning model to analyze medical images like X-rays or MRI scans to detect signs of diseases such as pneumonia or cancer.</p>
+<p><b>Financial market prediction: </b>Create a system that uses historical data and deep learning models, like Long Short-Term Memory (LSTM) networks, to forecast stock prices and market trends.</p>
+<p><b>Intelligent video surveillance: </b>Enhance security by building an AI model that can detect and track suspicious or unusual activity in video footage in real-time.</p>
+<p><b>AI-powered personalized education: </b>Develop a platform that recommends personalized learning paths and content to students based on their performance and learning style. </p>
+</section>
+<section id="jobs">
+<h2>Jobs</h2>
+<h3>Technical AI jobs</h3>
+<p><i>These roles are directly involved in the design, development, and implementation of AI systems:</i></p>
+<p><b>Prompt engineer: </b>This specialist designs and refines the text-based inputs (prompts) used to generate specific, high-quality outputs from AI models, such as chatbots and image generators. They use techniques to improve the model's accuracy and guide its responses to align with a user's intent.</p>
+<p><b>AI trainer: </b>Working behind the scenes, AI trainers teach AI models to understand and respond to human language by feeding them organized and relevant data. They clean and annotate data, design conversational flows, and evaluate an AI's performance to ensure its responses are accurate and effective.</p>
+<p><b>AI research scientist: </b>These professionals work at the forefront of AI innovation, researching and developing new algorithms and models. Their work pushes the boundaries of what AI can achieve in fields like deep learning, computer vision, and natural language processing.</p>
+<p><b>Machine learning engineer: </b>This role focuses on building and deploying the machine learning models that power AI applications. They work with data scientists to turn theoretical models into practical, scalable solutions used in products like virtual assistants and recommendation engines.</p>
+<p><b>Robotics engineer: </b>These engineers develop machines that automate tasks by integrating AI algorithms. This allows robots to learn and react to their surroundings rather than simply following a fixed script, with applications in industries from manufacturing to healthcare.</p>
+<p><b>Generative AI developer: </b>This developer builds and tests generative AI solutions, such as large language models (LLMs) and multi-modal AI systems. The job involves integrating these technologies using skills in programming languages like Python and frameworks like Hugging Face.</p>
+<p><b>Computer vision engineer: </b>This engineer builds algorithms that enable machines to interpret and "see" information from visual inputs. The technology is used in diagnostics in healthcare and quality control in manufacturing.</p>
+<p><b>Natural language processing (NLP) engineer: </b>This specialist develops models and algorithms that help machines understand, interpret, and generate human language. Their work improves chatbots, voice assistants, and sentiment analysis systems. </p>
+<h3>Strategic and collaborative AI jobs</h3>
+<p><i>These positions focus on managing and overseeing AI technology's business, ethical, and human-facing aspects:</i></p>
+<p><b>AI ethicist: </b>This specialist monitors the ethical implications of AI technologies and ensures they are developed and used responsibly. The role is crucial for preventing harm, mitigating bias in algorithms, and establishing standards for fair, transparent AI systems.</p>
+<p><b>AI product manager: </b>Combining business strategy with technical knowledge, this manager oversees the development of AI-powered products from concept to launch. They ensure the final product meets market needs, business goals, and a positive user experience.</p>
+<p><b>Human-AI interaction designer: </b>This designer focuses on creating intuitive and effective user experiences for AI-powered tools. They facilitate seamless collaboration between humans and AI, making the technology easy and useful to interact with.</p>
+<p><b>AI consultant: </b>This advisor helps organizations implement AI capabilities and strategies. They identify opportunities for AI integration, guide project implementation, and train staff to use new AI tools effectively.</p>
+<p><b>AI operations manager: </b>This manager handles the enterprise-wide implementation and coordination of AI tools. They collaborate with technical and business teams to ensure that AI projects are deployed successfully and efficiently.</p> 
+<h3>Hybrid AI jobs</h3>
+<p><i>These emerging roles combine AI skills with knowledge from other industries, augmenting existing professions:</i></p>
+<p><b>Health-tech implementation specialist: </b>This professional helps healthcare organizations adopt and integrate new medical AI products, assisting with implementation and proprietary platform development.</p>
+<p><b>AI and cybersecurity analyst: </b>These analysts use AI-powered tools to detect and neutralize cyber threats. They protect data, networks, and systems by combining cybersecurity expertise with AI analysis.</p>
+<p><b>AI-powered creative professionals: </b>Artists, writers, and designers are using AI as a co-creator, with roles like AI Video Creator emerging. In this role, a creative professional uses AI tools to generate and edit video content based on scripts. </p>
+</div>
+</div>
+</section>
+<script>
+function goBack() {
+  window.history.back();
+}
+function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    function scrollToSection(sectionId) {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      document.getElementById("menu").style.display = "none";
+    }
+
+    // Hide menu when clicking outside
+    document.addEventListener("click", (event) => {
+      const menu = document.getElementById("menu");
+      const button = document.querySelector(".card-menu-btn");
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    });
+</script>
+
+</body>
+</html>

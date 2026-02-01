@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Content Finder</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+  <link rel="stylesheet" href="style.css">
+<style>
+    /* ===== Feedback Section ===== */
+.feedback {
+  margin: 60px auto;
+  padding: 25px;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feedback h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.feedback form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback input,
+.feedback textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.feedback input:focus,
+.feedback textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.feedback textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.feedback button {
+  padding: 14px;
+  border: none;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feedback button:hover {
+  background: linear-gradient(135deg, #0056b3, #003d82);
+}
+
+#commentsList {
+  margin-top: 30px;
+}
+
+#commentsList h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+#commentsList ul {
+  list-style: none;
+  padding: 0;
+}
+
+#commentsList li {
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+#commentsList li strong {
+  display: block;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+#commentsList li p {
+  margin: 0;
+  color: #444;
+  line-height: 1.5;
+}
+  .btn{
+      padding: 0.6rem 1.2rem;
+      background:linear-gradient(135deg, #4a90e2, #00c9a7);
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+  }
+  .btn:hover {
+      background: #d4e0ee;
+      color: rgb(0, 0, 0);
+      transform: translateY(-4px);
+    }
+  .back-arrow {
+  position: fixed;
+  top: 90px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #4a90e2, #00c9a7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.back-arrow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
+  stroke-width: 2.5;
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+.back-arrow:hover .arrow-icon {
+  stroke: #f1f8e9; /* subtle hover color shift */
+  transform: translateX(-2px);
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>💬𝐹𝑒𝑒𝒹𝒷𝒶𝒸𝓀 & 𝒞𝑜𝓂𝓂𝑒𝓃𝓉𝓈</h1>
+    <p>We value your feedback! Please leave your thoughts below.</p>
+     <button class="btn" onclick="location.href='index.html'">🏠 Home</button>
+     <div class="search-bar">
+      🔍<input type="text" id="searchInput" placeholder="Search for a topic...">
+  </div>
+  </header>
+  <section class="feedback">
+    <h2>Share Your Feedback</h2>
+  <!-- 🔙 Stylish Back Arrow Button -->
+<a href="javascript:history.back()" class="back-arrow" title="Go Back">
+  <svg viewBox="0 0 24 24" class="arrow-icon">
+    <path d="M15 18l-6-6 6-6" />
+  </svg>
+</a>
+    <form id="commentForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="comment" placeholder="Write your feedback..." required></textarea>
+      <button type="submit">Post Comment</button>
+    </form>
+
+    <div id="commentsList">
+      <h3>Recent Comments:</h3>
+      <ul id="commentContainer"></ul>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById("commentForm");
+    const commentContainer = document.getElementById("commentContainer");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      let name = document.getElementById("name").value.trim();
+      let comment = document.getElementById("comment").value.trim();
+
+      if(name && comment) {
+        let li = document.createElement("li");
+        li.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+        commentContainer.appendChild(li);
+        form.reset();
+      }
+    });
+     const searchInput = document.getElementById("searchInput");
+
+  
+    searchInput.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        searchPage();
+      }
+    });
+
+    function searchPage() {
+      let query = searchInput.value.toLowerCase().trim();
+
+      const pages = {
+        "sports": "sports.html",
+        "technology": "technology.html",
+        "health": "health.html",
+        "education": "education.html",
+        "entertainment": "entertainment.html",
+        "business": "business.html",
+      };
+
+      if (pages[query]) {
+        window.location.href = pages[query];
+      } else {
+        alert("No results found for: " + query);
+      }
+    }
+  </script>
+<div style="text-align:center; margin-top: 20px;">
+  <button onclick="window.location.href='database.html'" 
+          style="padding:10px 20px; background:linear-gradient(90deg,#00c9a7,#4a90e2); 
+          border:none; border-radius:8px; color:white; font-size:1rem; cursor:pointer;">
+    Go to Database
+  </button>
+</div>
+
+</body>
+</html>
